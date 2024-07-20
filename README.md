@@ -4,6 +4,8 @@ This project designs and implements a cost effective smart shelf system using va
 ## Introduction
 Our smart shelf system revolutionizes inventory management in retail environments by utilizing ultrasonic sensors to detect product presence. These sensors emit ultrasonic waves and measure the time it takes for the waves to bounce back from the products. This distance is used to estimate the number of products on the shelf. The data is transmitted to a web server, allowing store managers, staff, and customers to view real-time inventory information. This system eliminates the need for manual stock checks and simplifies the restocking process.
 
+<img src="https://github.com/user-attachments/assets/3248e918-f158-43c7-864f-194685cae0d4" alt="Stock Sense Web Page Image" width="1000"/>
+
 ## Hardware Setup
 ### 1. Hardware Components
 - ESP32 Board: Provides Wi-Fi connectivity and processing capabilities.
@@ -42,7 +44,10 @@ Our smart shelf system revolutionizes inventory management in retail environment
 ## Figures
 ### Live Tracking Chart
 - Shows real-time data of product quantities on the shelf.
-###Web Server Display
-Shows the web page with temperature, humidity, and product quantity details.
+### Web Server Display
+- Shows the web page with temperature, humidity, and product quantity details.
+
+![ThingSpeak_images](https://github.com/user-attachments/assets/0a0b2cde-84f0-4bc1-9282-8f0f712bd4fb)
+
 ## Code
 The provided Arduino code initializes the hardware components, reads sensor data, and transmits the data to ThingSpeak. It also serves a web page with real-time data on product availability, temperature, and humidity.
