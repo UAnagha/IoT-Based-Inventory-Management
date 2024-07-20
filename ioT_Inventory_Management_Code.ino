@@ -62,13 +62,13 @@ void setup()
 
 void loop() {
   handleClientRequests();
-  printSensorData(globalClient); // Pass the globalClient object as an argument
-  delay(1000); // Delay to avoid excessive sensor readings
+  printSensorData(globalClient); 
+  delay(1000); 
   ThingSpeak.setField(1,qty_left);
   sensors_event_t event;
   dht.temperature().getEvent(&event);
   float temperature = event.temperature;
-  ThingSpeak.setField(2, temperature); // Temperature
+  ThingSpeak.setField(2, temperature); 
 
   dht.humidity().getEvent(&event);
   float humidity = event.relative_humidity;
@@ -143,7 +143,7 @@ void processRequest(WiFiClient client) {
   if (client.find("GET /shelf1")) {
     displayShelfDetails(client, "Shelf One");
   } else {
-    displayShelfDetails(client, "Shelf One"); // Default to Shelf One
+    displayShelfDetails(client, "Shelf One"); 
   }
   client.println("</div></div>");
 
@@ -209,9 +209,9 @@ void printSensorData(WiFiClient client) {
   }
 }
 void activateBuzzer() {
-  digitalWrite(buzzer, HIGH); // Turn on the buzzer
+  digitalWrite(buzzer, HIGH); 
 }
 
 void deactivateBuzzer() {
-  digitalWrite(buzzer, LOW); // Turn off the buzzer
+  digitalWrite(buzzer, LOW); 
 }
