@@ -30,7 +30,7 @@ int relay = 5;
 int qty_left = 0;
 
 const char *ssid = "Ana";
-const char *password ="Hallelujah@1234";
+const char *password ="Password";
 WiFiServer server(80);
 
 void setup()
